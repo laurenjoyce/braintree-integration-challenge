@@ -1,9 +1,15 @@
 == README
 
-Setup Instructions:
+To clone repository:
+
+1. Click the Clone button
+2. Copy the clone command
+3. Launch a terminal window
+4. Type git clone, then paste the URL you copied in step 2.
+5. Press enter
+
+Application Setup Instructions:
 
 1. Bundle
 
 2. Run rake db:seed
-
-3. Set 
