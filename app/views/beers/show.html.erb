@@ -1,0 +1,78 @@
+<div class="container">
+  <h1>Beer Information</h1>
+
+  <table class="table table-condensed table-striped">
+    <tr>
+      <td>
+        <p>Name:</p>
+      </td>
+      <td>
+        <p><%= @beer.name %></p>
+      </td>    
+    </tr>
+    <tr>
+      <td>
+        <p>Style:</p>
+      </td>
+      <td>
+        <p><%= @beer.style %></p>
+      </td>    
+    </tr>    
+    <tr>
+      <td>
+        <p>Hop: </p>
+      </td>
+      <td>
+        <p><%= @beer.hop %></p>
+      </td>
+    </tr>    
+    <tr>
+    <tr>
+      <td>
+        <p>Yeast:</p>
+      </td>
+      <td>
+        <p><%= @beer.yeast %></p>
+      </td>    
+    <tr>
+      <td>
+        <p>malts:</p>
+      </td>
+      <td>
+        <p><%= @beer.malts %></p>
+      </td>    
+    </tr>
+    <tr>
+      <td>
+        <p>ibu:</p>
+      </td>
+      <td>
+        <p><%= @beer.ibu %></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Alcohol:</p>
+      </td>
+      <td>
+        <p><%= @beer.alcohol %></p>
+      </td>      
+    </tr>  
+    <tr>
+      <td>
+        <p>Price:</p>
+      </td>
+      <td>
+        <p><%= @beer.price %></p>
+      </td>      
+    </tr>                                                   
+  </table>
+
+
+  <p><%= link_to "Back to beers", "/beers" %></p>
+  <p><%= link_to "Edit beer", "/beers/#{@beer.id}/edit" %></p>
+  <p><%= link_to "Delete this beer", "/beers/#{@beer.id}", method: :delete %></p>
+  <p><%= link_to "Order this beer!", "/orders/new", method: :get%></p>
+
+
+

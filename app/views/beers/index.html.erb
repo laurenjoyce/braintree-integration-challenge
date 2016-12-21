@@ -1,0 +1,56 @@
+
+<div class="container">
+
+
+<h1>Beer Index Page</h1>
+
+<p><%= link_to "Add a new beer", "/beers/new" %></p>
+
+<table class="table table-condensed table-striped">
+  <tr>
+    <th>Name <a href="/beers?<%= @sorting_order %>=name"><span class ="<%= @sorting_caret %>"></span></a></th>
+    <th>Style </th>
+    <th>Hop </th>
+    <th>Yeast </th>
+    <th>Malts </th>
+    <th>ibu </th>
+    <th>Alcohol </th>
+    <th>blg </th>
+    <th>Price </th>
+  </tr>
+
+        <% @beers.each do |beer| %>
+
+        <tr>
+          <td>
+            <p><a href="/beers/<%= beer.id %>"><%= beer.name %> </a></p>
+          </td>
+          <td>
+            <p><%= beer.style %></p>
+          </td>
+          <td>
+            <p><%= beer.hop %></p>
+          </td>
+          <td>
+            <p><%= beer.yeast%></p>
+          </td>
+          <td>
+            <p><%= beer.malts%></p>
+          </td>
+          <td>
+            <p><%= beer.ibu%></p>
+          </td>
+          <td>
+            <p><%= beer.alcohol%></p>
+          </td>
+          <td>
+            <p><%= beer.blg%></p>
+          </td>
+          <td>
+            <p><%= beer.price%></p>
+          </td>          
+        </tr>
+        <% end %>
+</table>
+<%= will_paginate @beers %>
+</div>
